@@ -1,4 +1,6 @@
-#pragma once
+#ifndef LEGO_BRICK_H
+#define LEGO_BRICK_H
+
 #include "Brick.h"
 
 class LegoBrick : public Brick
@@ -9,3 +11,5 @@ public:
 
     std::string getData() override { return "I'm a lego brick."; }
 };
+
+#endif

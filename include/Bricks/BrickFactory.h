@@ -1,4 +1,6 @@
-#pragma once
+#ifndef BRICK_FACTORY_H
+#define BRICK_FACTORY_H
+
 #include "ClayBrick.h"
 #include "LegoBrick.h"
 #include "TerracottaBrick.h"
@@ -35,3 +37,5 @@ public:
         return nullptr;
     }
 };
+
+#endif

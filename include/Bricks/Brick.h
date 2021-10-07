@@ -1,4 +1,6 @@
-#pragma once
+#ifndef BRICK_H
+#define BRICK_H
+
 #include <iostream>
 #include <string>
 
@@ -10,3 +12,5 @@ public:
 
     virtual std::string getData() = 0;
 };
+
+#endif
