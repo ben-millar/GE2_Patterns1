@@ -31,5 +31,7 @@ public:
             default:
                 break;
         }
+
+        return nullptr;
     }
 };

@@ -7,5 +7,5 @@ public:
     ClayBrick() = default;
     ~ClayBrick() = default;
 
-    void Draw() override { std::cout << "I'm a clay brick." << std::endl; }
+    std::string getData() override { return "I'm a clay brick."; }
 };

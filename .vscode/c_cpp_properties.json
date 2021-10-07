@@ -6,7 +6,7 @@
                 "${workspaceFolder}/**",
                 "C:\\Users\\gameuser\\Documents\\Libs\\SDL2-2.0.16\\include",
                 "D:\\Program Files\\SDL2-2.0.16\\include",
-                ".\\include"
+                ".\\include\\**"
             ],
             "defines": [
                 "_DEBUG",

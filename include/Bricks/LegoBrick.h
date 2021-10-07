@@ -7,5 +7,5 @@ public:
     LegoBrick() = default;
     ~LegoBrick() = default;
 
-    void Draw() override { std::cout << "I'm a lego brick." << std::endl; }
+    std::string getData() override { return "I'm a lego brick."; }
 };

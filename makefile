@@ -1,6 +1,6 @@
 CXX			:= g++
 
-EXE_NAME	:= Lab0
+EXE_NAME	:= Lab2
 
 MSG_START	:= "Build Started"
 MSG_END		:= "Build Complete"
@@ -8,8 +8,7 @@ MSG_CLEAN	:= "Cleaning up"
 
 BUILD_DIR	:= ./bin
 SRC_DIR		:= ./src
-SDL_INCLUDE	:= "C:/Users/gameuser/Documents/Libs/SDL2-2.0.16/include"
-SDL_LIB		:= "C:/Users/gameuser/Documents/Libs/SDL2-2.0.16/lib"
+INCL_DIR	:= ./include
 
 SRC			:= ${SRC_DIR}/*
 
@@ -24,7 +23,8 @@ build:
 	#create bin directory
 	mkdir ${BUILD_DIR}
 
-	${CXX} -o ${EXE_NAME} ${SRC} -I${SDL_INCLUDE} -L${SDL_LIB} -lmingw32 -lSDL2main -lSDL2
+	${CXX} -o ${EXE_NAME} ${SRC} -I${INCL_DIR}
+
 	@echo ${MSG_END}
 	./${EXE_NAME}
 

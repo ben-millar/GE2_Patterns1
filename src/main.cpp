@@ -1,25 +1,24 @@
 #define DEBUG_MSG(msg) (std::cout << msg << std::endl);
 
-#include <iostream>
-#include "../include/Game.h"
+#include "Output/Output.h"
+#include "Bricks/BrickFactory.h"
+#include "Bricks/ClayBrick.h"
+#include "Bricks/LegoBrick.h"
+#include "Bricks/TerracottaBrick.h"
 
 int main(int argc, char** argv)
 {
-    Game* game = new Game();
-    game->initialize("Lab 0", 0, 0, 1366, 768, SDL_WINDOW_INPUT_FOCUS);
+    Brick* clay = BrickFactory::getBrick(BrickType::CLAY);
+    Brick* lego = BrickFactory::getBrick(BrickType::LEGO);
+    Brick* terracotta = BrickFactory::getBrick(BrickType::TERRACOTTA);
 
-    DEBUG_MSG("Game object created")
-    DEBUG_MSG("Game loop starting...")
+    Output::print(clay->getData());
+    Output::print(lego->getData());
+    Output::print(terracotta->getData());
 
-    while(game->isRunning())
-    {
-        game->handleEvents();
-        game->update();
-        game->render();
-    }
-
-    DEBUG_MSG("Calling clean-up")
-    game->cleanUp();
+    Output::print(clay->getData().c_str());
+    Output::print(lego->getData().c_str());
+    Output::print(terracotta->getData().c_str());
 
     return 0;
 }

@@ -7,5 +7,5 @@ public:
     TerracottaBrick() = default;
     ~TerracottaBrick() = default;
 
-    void Draw() override { std::cout << "I'm a terracotta brick." << std::endl; }
+    std::string getData() override { return "I'm a terracotta brick."; }
 };
