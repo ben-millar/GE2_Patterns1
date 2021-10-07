@@ -11,6 +11,16 @@ void Game::initialize(std::string title, int x, int y, int w, int h, Uint32 flag
     } else {
         m_isRunning = true;
     }
+
+    Brick* clay = BrickFactory::getBrick(BrickType::CLAY);
+    Brick* lego = BrickFactory::getBrick(BrickType::LEGO);
+    Brick* terracotta = BrickFactory::getBrick(BrickType::TERRACOTTA);
+
+    clay->Draw();
+    lego->Draw();
+    terracotta->Draw();
+
+    system("pause");
 }
 
 void Game::handleEvents()

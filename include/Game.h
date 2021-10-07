@@ -2,6 +2,7 @@
 #include <array>
 #include <SDL.h>
 #include <SDL_image.h>
+#include "BrickFactory.h"
 
 class Game
 {
