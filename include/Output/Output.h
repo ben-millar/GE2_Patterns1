@@ -18,7 +18,7 @@ public:
 
     static void print(const char* t_output) {
         printf("[const char* printed using printf]\t");
-        printf(t_output);
+        printf("%s", t_output);
         printf("\n");
     }
 };
