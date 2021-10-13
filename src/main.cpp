@@ -2,15 +2,12 @@
 
 #include "Output/Output.h"
 #include "Bricks/BrickFactory.h"
-#include "Bricks/ClayBrick.h"
-#include "Bricks/LegoBrick.h"
-#include "Bricks/TerracottaBrick.h"
 
 int main(int argc, char** argv)
 {
-    Brick* clay = BrickFactory::getBrick(BrickType::CLAY);
-    Brick* lego = BrickFactory::getBrick(BrickType::LEGO);
-    Brick* terracotta = BrickFactory::getBrick(BrickType::TERRACOTTA);
+    BrickProxy clay = BrickFactory::getBrick(BrickType::CLAY);
+    BrickProxy lego = BrickFactory::getBrick(BrickType::LEGO);
+    BrickProxy terracotta = BrickFactory::getBrick(BrickType::TERRACOTTA);
 
     Output::print(clay->getData());
     Output::print(lego->getData());

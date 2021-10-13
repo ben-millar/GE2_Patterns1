@@ -1,6 +1,7 @@
 #ifndef BRICK_FACTORY_H
 #define BRICK_FACTORY_H
 
+#include "BrickProxy.h"
 #include "ClayBrick.h"
 #include "LegoBrick.h"
 #include "TerracottaBrick.h"
@@ -18,17 +19,17 @@ public:
     BrickFactory() = default;
     ~BrickFactory() = default;
 
-    static Brick* getBrick(BrickType t_type) {
+    static BrickProxy getBrick(BrickType t_type) {
         switch(t_type)
         {
             case BrickType::CLAY:
-                return new ClayBrick();
+                return BrickProxy(new ClayBrick());
                 break;
             case BrickType::LEGO:
-                return new LegoBrick();
+                return BrickProxy(new LegoBrick());
                 break;
             case BrickType::TERRACOTTA:
-                return new TerracottaBrick();
+                return BrickProxy(new TerracottaBrick());
                 break;
             default:
                 break;
